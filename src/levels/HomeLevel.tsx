@@ -20,12 +20,12 @@ export default function HomeLevel({ setCurrentLevel, setNotification }: LevelPro
   }, [])
 
   const boxData = [
-    { position: [-5.3, 1.8, -1], level: 1, label: 'Precheck', opacity: 1 },
-    { position: [-1, 1.8, -4], level: 6, label: 'P.E.K.B', opacity: 1 },
-    { position: [3.5, 1.8, -0.5], level: 25, label: 'KCL', opacity: 1 },
-    { position: [3.5, 1.8, -8], level: 34, label: 'IRM', opacity: 1 },
-    { position: [-2.5, 1.8, -10], level: 44, label: 'Bunkering', opacity: 1 },
-    { position: [-6.8, 1.8, -1], level: 53, label: 'ACH', opacity: 1 },
+    // { position: [-5.3, 1.8, -1], level: 1, label: 'Precheck', opacity: 1 },
+    { position: [-1, 1.8, -4], level: 1, label: 'P.E.K.B', opacity: 1 },
+    // { position: [3.5, 1.8, -0.5], level: 25, label: 'KCL', opacity: 1 },
+    // { position: [3.5, 1.8, -8], level: 34, label: 'IRM', opacity: 1 },
+    // { position: [-2.5, 1.8, -10], level: 44, label: 'Bunkering', opacity: 1 },
+    // { position: [-6.8, 1.8, -1], level: 53, label: 'ACH', opacity: 1 },
 
   ];
 
