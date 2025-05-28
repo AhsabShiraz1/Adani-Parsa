@@ -46,6 +46,12 @@ export default function Silo({ setNotification }: LevelProps) {
         <Model scale={0.5} position={[-70, 0, -13]} rotation={[0, 4.7, 0]} url="/assets/long_rail_road_2.glb" />
         <Model scale={1} position={[-16, -1.5, -17.3]} rotation={[0, Math.PI / 2, 0]} url="/assets/Train_engine.glb" />
         <Model scale={1} position={[25, 0.6, -12.5]} rotation={[0, 0, 0]} url="/assets/Train_boogies.glb" />
+        <Model scale={1.2} position={[44, 0.6, 1.2]} rotation={[0, -Math.PI, 0]} url="/assets/parsa-railway-props.glb" />
+        <Model scale={0.8} position={[-40, 0, 1.2]} rotation={[0, -Math.PI, 0]} url="/assets/locomotive-train-storage.glb" />
+        <Model scale={1.2} position={[-35, 0, -32]} rotation={[0, -Math.PI, 0]} url="/assets/railway-poles.glb" />
+
+
+
       <Model key="washery-ground" scale={3} position={[0, -0.5, -5]} rotation={[0,  0 , 0]} url="/assets/washery-ground-final.glb" />
 
       </Suspense>
