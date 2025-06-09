@@ -28,7 +28,7 @@ export default function IrmLevel6({ setNotification }: LevelProps) {
     <>
       <Suspense fallback={null}>
         {/* <Model url="/assets/irm-scene2-comp.glb" position={[190, -6.5, 150]} scale={5} rotation={[0, -Math.PI/2 , 0]} /> */}
-        <Model url="/assets/crane-animated-final.glb" position={[32, -6, -15]} scale={1} rotation={[0, 0, 0]} />
+        <Model url="/assets/crane-animated-v1.glb" position={[32, -6, -15]} scale={1} rotation={[0, 0, 0]} />
         <Model url="/assets/bulk-carrier-inside.glb" position={[0, 10, -12]} scale={0.2} rotation={[0, 0, 0]} />
         {/* <Model key="excavator" scale={1} position={[7, -6, -12]} rotation={[0, -Math.PI, 0]} url="/assets/Excavator.glb " /> */}
 
@@ -45,10 +45,10 @@ export default function IrmLevel6({ setNotification }: LevelProps) {
           scale: 650
         }}
       />
-      <CoalPile key="CoalPile1" scale={1} position={[-5, -16, -12]} rotation={[0, 0, 0]} />
-      <CoalPile key="CoalPile2" scale={1} position={[3.8, -16, -12]} rotation={[0, 0, 0]} />
-      <CoalPile key="CoalPile3" scale={1} position={[-5, -16, -4]} rotation={[0, 0, 0]} />
-      <CoalPile key="CoalPile4" scale={1} position={[3.8, -16, -4]} rotation={[0, 0, 0]} />
+      <CoalPile key="CoalPile1" scale={1.08} position={[-5, -9, -12]} rotation={[0, 0, 0]} />
+      <CoalPile key="CoalPile2" scale={1.08} position={[3.8, -9, -12]} rotation={[0, 0, 0]} />
+      <CoalPile key="CoalPile3" scale={1.08} position={[-5, -9, -4]} rotation={[0, 0, 0]} />
+      <CoalPile key="CoalPile4" scale={1.08} position={[3.8, -9, -4]} rotation={[0, 0, 0]} />
 
       {/* <VideoPlayer scale={[0.6, 0.6, 0.6]} src="/assets/crane-unloading-final.mp4" position={[-8, 2.5, -6]} rotation={[0, Math.PI / 4, 0]}></VideoPlayer> */}
 
