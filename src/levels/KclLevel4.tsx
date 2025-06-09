@@ -1,5 +1,6 @@
 import { LevelProps } from '../interfaces';
 import { useEffect, useRef } from "react";
+import { Image } from "@react-three/drei";
 import Model from "../Model";
 import { Environment } from "@react-three/drei"
 import { Button } from "../components/apfel/button"
@@ -8,24 +9,23 @@ import * as THREE from "three";
 import { Volume2 } from "@react-three/uikit-lucide"
 import { PositionalAudio } from "@react-three/drei"
 import VideoPlayer from '../VideoPlayer';
-
-
 export default function KclLevel4({ setNotification }: LevelProps) {
   const soundRef = useRef<THREE.PositionalAudio>(null);
-
   useEffect(() => {
     setNotification("Raw material is taken for processing in smelter \n Please stay 10m away from the yellow grills");
   }, [setNotification]);
-
   const handleAudio = () => {
     if (soundRef.current) {
       soundRef.current.play();
     }
   }
-
   return (
     <>
-      <Model key="Kcl-refinery-2" scale={0.1} position={[0, 0, -6]} rotation={[0, 0, 0]} url="/assets/kcl-anode-loading-final.glb" />
+      <Model key="factory" scale={1} position={[0, -2.4, -15]} rotation={[0, 0, 0]} url="https://spaces-storage.s3.ap-south-1.amazonaws.com/factory-crucible-v1.glb" />
+      <Model key="Electric-arc-furnace-grey" scale={8} position={[-10, -9 , -5]} rotation={[0, -Math.PI / 2, 0]} url="/assets/Electric-arc-furnace-grey.glb" />
+      <Model key="control-panel" scale={1} position={[-6, -0.5, -5]} rotation={[0, -Math.PI, 0]} url="/assets/control-panel.glb" />
+      <Model key="kcl-shed" scale={6} position={[6, -0.5, -5]} rotation={[0, 0, 0]} url="/assets/kcl-box.glb" />
+      <Model key="kcl-tank" scale={1} position={[6, -0.5, -3]} rotation={[0, 0, 0]} url="/assets/kcl-tank.glb" />
       <Environment
         files="/assets/kcl-env-compressed.hdr"
         background
@@ -35,7 +35,15 @@ export default function KclLevel4({ setNotification }: LevelProps) {
           scale: 180
         }}
       />
-
+      <Image
+        url="/assets/kcl-site-2.png"
+        position={[-2.8, 1, -1]}
+        toneMapped={false}
+        scale={[2, 1.1]}
+        rotation={[0, Math.PI / 4, 0]}
+        castShadow
+        receiveShadow
+      />
       <group position={[0, 0.8, -3]} rotation={[0, 0, 0]}>
         <Root>
           <Container
@@ -47,19 +55,16 @@ export default function KclLevel4({ setNotification }: LevelProps) {
           >
             <Container flexDirection="column" alignItems="flex-start">
               <Text fontSize={12} fontWeight="bold">
-                Welcome to KCL Refinery
+              The molten copper matte is sent to a converter furnace
               </Text>
               <Text fontSize={10} fontWeight="medium">
-                * The anode is transported to cells via crane 
+              where oxygen removes sulfur and iron to produce blister copper with around 98–99% purity. 
               </Text>
               <Text fontSize={10} fontWeight="medium">
-                * You are currently at the loading station
+              This blister copper is then cast into anode sheets
               </Text>
               <Text fontSize={10} fontWeight="medium">
-                * Please click on the video to watch the cells being loaded
-              </Text>
-              <Text fontSize={10} fontWeight="medium">
-                * Click 'Next' to proceed to electrolysis and stripping process
+              which serve as the starting material for electrolytic refining
               </Text>
             </Container>
           </Container>
@@ -67,7 +72,7 @@ export default function KclLevel4({ setNotification }: LevelProps) {
       </group>
       <PositionalAudio
         ref={soundRef}
-        url="/assets/kcl-level-4.mp3"
+        url="/assets/kcl-smelter-ops.mp3"
         distance={2}
         loop={false}
         autoplay={false}
@@ -82,7 +87,7 @@ export default function KclLevel4({ setNotification }: LevelProps) {
           </Container>
         </Root>
       </group>
-      <VideoPlayer scale={[0.3, 0.3, 0.3]} src="/assets/kcl-anode-loading.mp4" position={[4, 2.5, -5]} rotation={[0,-Math.PI / 6, 0]}></VideoPlayer>
+      <VideoPlayer scale={[0.3, 0.3, 0.3]} src="/assets/kcl-anode-loading.mp4" position={[2, 2.5, -3]} rotation={[0,-Math.PI / 6, 0]}></VideoPlayer>
     </>
   );
 }

@@ -3,55 +3,38 @@ import { Card } from '../components/apfel/card'
 import { LevelProps } from '../interfaces'
 import { useEffect, useRef } from 'react'
 import * as THREE from "three";
-import Model from '../Model'
+// import Model from '../Model'
 import { Environment } from "@react-three/drei"
 import { Root, Text, Container } from "@react-three/uikit"
 import { Button } from '../components/apfel/button';
 import { Download, Volume2 } from "@react-three/uikit-lucide"
 import { PositionalAudio } from "@react-three/drei";
-
-
-
-
 export default function HomeLevel({ setCurrentLevel, setNotification }: LevelProps) {
   const soundRef = useRef<THREE.PositionalAudio>(null);
   useEffect(() => {
     setNotification("Welcome to Adani Immersive training,\n Please click on any cube with you're controller to access the module")
   }, [])
-
   const boxData = [
-    { position: [-5.3, 1.8, -1], level: 1, label: 'Precheck', opacity: 1 },
-    { position: [-1, 1.8, -4], level: 6, label: 'P.E.K.B', opacity: 1 },
-    { position: [3.5, 1.8, -0.5], level: 25, label: 'KCL', opacity: 1 },
-    { position: [3.5, 1.8, -8], level: 34, label: 'IRM', opacity: 1 },
-    { position: [-2.5, 1.8, -10], level: 44, label: 'Bunkering', opacity: 1 },
-    { position: [-6.8, 1.8, -1], level: 53, label: 'ACH', opacity: 1 },
-
+    { position: [0, 2, -5], level: 1, label: 'KCL', opacity: 1 },
   ];
-
   const handleAudio = () => {
     if (soundRef.current) {
       soundRef.current.play();
     }
   }
-
   const downloadLocalStorageAsCSV = () => {
     const localStorageData = { ...localStorage };
     const csvRows: string[] = [];
-
     // Extract headers
     const headers = Object.keys(localStorageData);
     csvRows.push(headers.join(','));
-
     // Extract values
     const values = headers.map(key => JSON.stringify(localStorageData[key] || '').replace(/,/g, ''));
     csvRows.push(values.join(','));
-
     // Create CSV Blob and trigger download
     const csvContent = csvRows.join('\n');
     const blob = new Blob([csvContent], { type: 'text/csv' });
     const url = URL.createObjectURL(blob);
-
     const link = document.createElement('a');
     link.href = url;
     link.download = 'Adani-results.csv';
@@ -59,10 +42,9 @@ export default function HomeLevel({ setCurrentLevel, setNotification }: LevelPro
     link.click();
     document.body.removeChild(link);
   };
-
   return (
     <>
-      <Model url="/assets/home-cpd-model.glb" position={[-6, -0.5, -4.7]} scale={2} />
+      {/* <Model url="/assets/round-art-gallery.glb" position={[0, -0.5, -4.7]} scale={5} /> */}
       {boxData.map((box, index) => (
         <group key={index}>
           <Box position={[box.position[0], box.position[1], box.position[2]]} setCurrentLevel={setCurrentLevel} level={box.level} opacity={box.opacity} />
@@ -78,15 +60,16 @@ export default function HomeLevel({ setCurrentLevel, setNotification }: LevelPro
         </group>
       ))}
       <Environment
-        files="/assets/parsa-env-compressed.hdr"
+        files="/assets/reception-final.hdr"
         background
-        ground={{
-          height: 20,
-          radius: 100,
-          scale: 230
-        }}
+         ground={{
+            height: 5,
+            radius: 100,
+            scale: 23
+          }}
       />
-      <group position={[0, 4.5, -3]} rotation={[0, 0, 0]}>
+   
+      <group position={[0, 3.5, -6]} rotation={[0, 0, 0]}>
         <Root>
           <Container
             padding={10}
@@ -120,7 +103,7 @@ export default function HomeLevel({ setCurrentLevel, setNotification }: LevelPro
         autoplay={false}
         onEnded={() => soundRef.current?.stop()}
       />
-      <group position={[0.4, 3, -3]}>
+      <group position={[0.8, 1.5, -3]}>
         <Root>
           <Container>
             <Button variant="icon" padding={4} onClick={handleAudio}>
@@ -140,5 +123,4 @@ export default function HomeLevel({ setCurrentLevel, setNotification }: LevelPro
       </group>
     </>
   )
-
 }

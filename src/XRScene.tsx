@@ -72,6 +72,9 @@ import AchLevel6 from './levels/AchLevel6'
 import AchLevel7 from './levels/AchLevel7'
 import AchConclusion from './levels/AchConclusion'
 import PasswordUpdate from './levels/PasswordUpdate'
+import KclLevelSite1 from './levels/KclLevelSite1'
+import KclLevelTransport from './levels/KclLevelTransport'
+import KclDispatch from './levels/KclDispatch'
 
 
 
@@ -147,120 +150,120 @@ function XRScene() {
                 return <PrecheckLevel2 setCurrentLevel={setCurrentLevel} setNotification={setNotification} />;
             case 4:
                 return <PrecheckLevel3 setCurrentLevel={setCurrentLevel} setNotification={setNotification} />;
+            // case 5:
+            //     return <Exploration setCurrentLevel={setCurrentLevel} setNotification={setNotification} />
+            // case 6:
+            //      return <Instructions key={`instructions-${currentLevel}`} setCurrentLevel={setCurrentLevel} setNotification={setNotification} />;
+            // case 7:
+            //     return <ParsaLevel setCurrentLevel={setCurrentLevel} setNotification={setNotification} />
+            // case 8:
+            //     return <ParsaLevel1 setCurrentLevel={setCurrentLevel} setNotification={setNotification} />
+            // case 9:
+            //     return <ParsaLevel2 setCurrentLevel={setCurrentLevel} setNotification={setNotification} />
+            // case 10:
+            //     return <ParsaLevel3 setCurrentLevel={setCurrentLevel} setNotification={setNotification} />
+            // case 11:
+            //     return <ParsaLevel4 setCurrentLevel={setCurrentLevel} setNotification={setNotification} />
+            // case 12:
+            //     return <ParsaLevel5 setCurrentLevel={setCurrentLevel} setNotification={setNotification} />
+            // case 13:
+            //     return <ParsaLevel6 setCurrentLevel={setCurrentLevel} setNotification={setNotification} />
+            // case 14:
+            //     return <ParsaLevel7 setCurrentLevel={setCurrentLevel} setNotification={setNotification} />
+            // case 15:
+            //     return <ParsaLevel8 setCurrentLevel={setCurrentLevel} setNotification={setNotification} />
+            // case 16:
+            //     return <ParsaLevel9 setCurrentLevel={setCurrentLevel} setNotification={setNotification} />
+            // case 17:
+            //     return <ParsaLevel10 setCurrentLevel={setCurrentLevel} setNotification={setNotification} />
+            // case 18:
+            //     return <ParsaLevel11 setCurrentLevel={setCurrentLevel} setNotification={setNotification} />
+            // case 19:
+            //     return <ParsaLevel12 setCurrentLevel={setCurrentLevel} setNotification={setNotification} />
+            // case 20:
+            //     return <Silo setCurrentLevel={setCurrentLevel} setNotification={setNotification} />
+            // case 21:
+            //     return <Horticulture setCurrentLevel={setCurrentLevel} setNotification={setNotification} />
+            // case 22:
+            //     return <CsrLevel setCurrentLevel={setCurrentLevel} setNotification={setNotification} />
+            // case 23:
+            //     return <Township setCurrentLevel={setCurrentLevel} setNotification={setNotification} />
+            // case 24:
+            //     return <ParsaConclusion setCurrentLevel={setCurrentLevel} setNotification={setNotification} />
+            // case 25:
+            //     return <Instructions key={`instructions-${currentLevel}`} setCurrentLevel={setCurrentLevel} setNotification={setNotification} />
             case 5:
-                return <Exploration setCurrentLevel={setCurrentLevel} setNotification={setNotification} />
-            case 6:
-                 return <Instructions key={`instructions-${currentLevel}`} setCurrentLevel={setCurrentLevel} setNotification={setNotification} />;
-            case 7:
-                return <ParsaLevel setCurrentLevel={setCurrentLevel} setNotification={setNotification} />
-            case 8:
-                return <ParsaLevel1 setCurrentLevel={setCurrentLevel} setNotification={setNotification} />
-            case 9:
-                return <ParsaLevel2 setCurrentLevel={setCurrentLevel} setNotification={setNotification} />
-            case 10:
-                return <ParsaLevel3 setCurrentLevel={setCurrentLevel} setNotification={setNotification} />
-            case 11:
-                return <ParsaLevel4 setCurrentLevel={setCurrentLevel} setNotification={setNotification} />
-            case 12:
-                return <ParsaLevel5 setCurrentLevel={setCurrentLevel} setNotification={setNotification} />
-            case 13:
-                return <ParsaLevel6 setCurrentLevel={setCurrentLevel} setNotification={setNotification} />
-            case 14:
-                return <ParsaLevel7 setCurrentLevel={setCurrentLevel} setNotification={setNotification} />
-            case 15:
-                return <ParsaLevel8 setCurrentLevel={setCurrentLevel} setNotification={setNotification} />
-            case 16:
-                return <ParsaLevel9 setCurrentLevel={setCurrentLevel} setNotification={setNotification} />
-            case 17:
-                return <ParsaLevel10 setCurrentLevel={setCurrentLevel} setNotification={setNotification} />
-            case 18:
-                return <ParsaLevel11 setCurrentLevel={setCurrentLevel} setNotification={setNotification} />
-            case 19:
-                return <ParsaLevel12 setCurrentLevel={setCurrentLevel} setNotification={setNotification} />
-            case 20:
-                return <Silo setCurrentLevel={setCurrentLevel} setNotification={setNotification} />
-            case 21:
-                return <Horticulture setCurrentLevel={setCurrentLevel} setNotification={setNotification} />
-            case 22:
-                return <CsrLevel setCurrentLevel={setCurrentLevel} setNotification={setNotification} />
-            case 23:
-                return <Township setCurrentLevel={setCurrentLevel} setNotification={setNotification} />
-            case 24:
-                return <ParsaConclusion setCurrentLevel={setCurrentLevel} setNotification={setNotification} />
-            case 25:
-                return <Instructions key={`instructions-${currentLevel}`} setCurrentLevel={setCurrentLevel} setNotification={setNotification} />
-            case 26:
                 return <KclLevel1 setCurrentLevel={setCurrentLevel} setNotification={setNotification} />
-            case 27:
+            case 6:
                 return <KclLevel2 setCurrentLevel={setCurrentLevel} setNotification={setNotification} />
-            case 28:
+            case 7:
                 return <KclLevelPpe setCurrentLevel={setCurrentLevel} setNotification={setNotification} />
-            case 29:
-                return <KclLevel3 setCurrentLevel={setCurrentLevel} setNotification={setNotification} />
-            case 30:
+            case 8:
+                return <KclLevelSite1 setCurrentLevel={setCurrentLevel} setNotification={setNotification} />
+            case 9:
                 return <KclLevel4 setCurrentLevel={setCurrentLevel} setNotification={setNotification} />
-            case 31:
+            case 10:
                 return <KclLevel5 setCurrentLevel={setCurrentLevel} setNotification={setNotification} />
-            case 32:
-                return <KclLevel6 setCurrentLevel={setCurrentLevel} setNotification={setNotification} />
-            case 33:
+            case 11:
+                return <KclLevelTransport setCurrentLevel={setCurrentLevel} setNotification={setNotification} />
+            case 12:
+                return <KclDispatch setCurrentLevel={setCurrentLevel} setNotification={setNotification} />
+            case 13:
                 return <KclConclusion setCurrentLevel={setCurrentLevel} setNotification={setNotification} />
-            case 34:
-                return <IrmLevel setCurrentLevel={setCurrentLevel} setNotification={setNotification} />
-            case 35:
-                return <IrmLevel1 setCurrentLevel={setCurrentLevel} setNotification={setNotification} />
-            case 36:
-                return <IrmLevel2 setCurrentLevel={setCurrentLevel} setNotification={setNotification} />
-            case 37:
-                return <IrmLevel3 setCurrentLevel={setCurrentLevel} setNotification={setNotification} />
-            case 38:
-                return <IrmLevel4 setCurrentLevel={setCurrentLevel} setNotification={setNotification} />
-            case 39:
-                return <IrmLevel5 setCurrentLevel={setCurrentLevel} setNotification={setNotification} />
-            case 40:
-                return <IrmLevel6 setCurrentLevel={setCurrentLevel} setNotification={setNotification} />
-            case 41:
-                return <IrmLevel7 setCurrentLevel={setCurrentLevel} setNotification={setNotification} />
-            case 42:
-                return <IrmLevel8 setCurrentLevel={setCurrentLevel} setNotification={setNotification} />
-            case 43:
-                return <IrmConclusion setCurrentLevel={setCurrentLevel} setNotification={setNotification} />
-            case 44:
-                return <Bunkering setCurrentLevel={setCurrentLevel} setNotification={setNotification} />
-            case 45:
-                return <BunkeringLevel1 setCurrentLevel={setCurrentLevel} setNotification={setNotification} />  
-            case 46:
-                return <BunkeringLevel2 setCurrentLevel={setCurrentLevel} setNotification={setNotification} />  
-            case 47:
-                return <BunkeringLevel3 setCurrentLevel={setCurrentLevel} setNotification={setNotification} /> 
-            case 48:
-                return <BunkeringLevel4 setCurrentLevel={setCurrentLevel} setNotification={setNotification} /> 
-            case 49:
-                return <BunkeringLevel5 setCurrentLevel={setCurrentLevel} setNotification={setNotification} /> 
-            case 50:
-                return <BargeOperations1 setCurrentLevel={setCurrentLevel} setNotification={setNotification} /> 
-            case 51:
-                return <BargeOperations2 setCurrentLevel={setCurrentLevel} setNotification={setNotification} /> 
-            case 52:
-                return <BargeConclusion setCurrentLevel={setCurrentLevel} setNotification={setNotification} />
-            case 53:
-                return <AchLevel1 setCurrentLevel={setCurrentLevel} setNotification={setNotification} />  
-            case 54:
-                return <AchLevel2 setCurrentLevel={setCurrentLevel} setNotification={setNotification} />   
-            case 55:
-                return <AchLevel3 setCurrentLevel={setCurrentLevel} setNotification={setNotification} /> 
-            case 56:
-                return <AchLevel4 setCurrentLevel={setCurrentLevel} setNotification={setNotification} />   
-            case 57:
-                return <AchLevel5 setCurrentLevel={setCurrentLevel} setNotification={setNotification} />  
-            case 58:
-                return <AchLevel6 setCurrentLevel={setCurrentLevel} setNotification={setNotification} />
-            case 59:
-                return <AchLevel7 setCurrentLevel={setCurrentLevel} setNotification={setNotification} />  
-            case 60:
-                return <AchConclusion setCurrentLevel={setCurrentLevel} setNotification={setNotification} />     
-            case 61:
-                return <PasswordUpdate setCurrentLevel={setCurrentLevel} setNotification={setNotification} />                                
+            // case 35:
+            //     return <IrmLevel setCurrentLevel={setCurrentLevel} setNotification={setNotification} />
+            // case 36:
+            //     return <IrmLevel1 setCurrentLevel={setCurrentLevel} setNotification={setNotification} />
+            // case 37:
+            //     return <IrmLevel2 setCurrentLevel={setCurrentLevel} setNotification={setNotification} />
+            // case 38:
+            //     return <IrmLevel3 setCurrentLevel={setCurrentLevel} setNotification={setNotification} />
+            // case 39:
+            //     return <IrmLevel4 setCurrentLevel={setCurrentLevel} setNotification={setNotification} />
+            // case 40:
+            //     return <IrmLevel5 setCurrentLevel={setCurrentLevel} setNotification={setNotification} />
+            // case 41:
+            //     return <IrmLevel7 setCurrentLevel={setCurrentLevel} setNotification={setNotification} />
+            // case 42:
+            //     return <IrmLevel8 setCurrentLevel={setCurrentLevel} setNotification={setNotification} />
+            // case 43:
+            //     return <IrmConclusion setCurrentLevel={setCurrentLevel} setNotification={setNotification} />
+            // case 44:
+            //     return <Bunkering setCurrentLevel={setCurrentLevel} setNotification={setNotification} />
+            // case 45:
+            //     return <BunkeringLevel1 setCurrentLevel={setCurrentLevel} setNotification={setNotification} />  
+            // case 46:
+            //     return <BunkeringLevel2 setCurrentLevel={setCurrentLevel} setNotification={setNotification} />  
+            // case 47:
+            //     return <BunkeringLevel3 setCurrentLevel={setCurrentLevel} setNotification={setNotification} /> 
+            // case 48:
+            //     return <BunkeringLevel4 setCurrentLevel={setCurrentLevel} setNotification={setNotification} /> 
+            // case 49:
+            //     return <BunkeringLevel5 setCurrentLevel={setCurrentLevel} setNotification={setNotification} /> 
+            // case 50:
+            //     return <BargeOperations1 setCurrentLevel={setCurrentLevel} setNotification={setNotification} /> 
+            // case 51:
+            //     return <BargeOperations2 setCurrentLevel={setCurrentLevel} setNotification={setNotification} /> 
+            // case 52:
+            //     return <BargeConclusion setCurrentLevel={setCurrentLevel} setNotification={setNotification} />
+            // case 53:
+            //     return <AchLevel1 setCurrentLevel={setCurrentLevel} setNotification={setNotification} />  
+            // case 54:
+            //     return <AchLevel2 setCurrentLevel={setCurrentLevel} setNotification={setNotification} />   
+            // case 55:
+            //     return <AchLevel3 setCurrentLevel={setCurrentLevel} setNotification={setNotification} /> 
+            // case 56:
+            //     return <AchLevel4 setCurrentLevel={setCurrentLevel} setNotification={setNotification} />   
+            // case 57:
+            //     return <AchLevel5 setCurrentLevel={setCurrentLevel} setNotification={setNotification} />  
+            // case 58:
+            //     return <AchLevel6 setCurrentLevel={setCurrentLevel} setNotification={setNotification} />
+            // case 59:
+            //     return <AchLevel7 setCurrentLevel={setCurrentLevel} setNotification={setNotification} />  
+            // case 60:
+            //     return <AchConclusion setCurrentLevel={setCurrentLevel} setNotification={setNotification} />     
+            // case 61:
+            //     return <PasswordUpdate setCurrentLevel={setCurrentLevel} setNotification={setNotification} />                                
             default:
                 return <HomeLevel setCurrentLevel={setCurrentLevel} setNotification={setNotification} />;
         }

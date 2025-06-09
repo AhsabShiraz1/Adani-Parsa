@@ -2,27 +2,21 @@ import { Environment } from "@react-three/drei"
 import { LevelProps } from '../interfaces'
 import Model from '../Model'
 import { Root, Text, Container } from "@react-three/uikit";
-
 import { Suspense, useEffect, useRef } from "react"
-import { PositionalAudio } from "@react-three/drei";
 import * as THREE from "three";
 import { Button } from '../components/apfel/button';
 import { Volume2 } from "@react-three/uikit-lucide"
 // import { SecurityGuard } from "./SecurityGuard"
-
 export default function KclLevel1({ setNotification }: LevelProps) {
   const soundRef = useRef<THREE.PositionalAudio>(null);
-
   useEffect(() => {
     setNotification("Welcome to Kutch Copper Limited, \n You are at the Project office, Please carry valid ID for registration")
   }, [])
-
   const handleAudio = () => {
     if (soundRef.current) {
       soundRef.current.play();
     }
   }
-
   return (
     <>
       <Suspense fallback={null}>
@@ -33,11 +27,12 @@ export default function KclLevel1({ setNotification }: LevelProps) {
         files="/assets/parsa-parking-1.hdr"
         background 
         ground={{
-          height: 20,     
-          radius: 280,    
-          scale: 250      
+          height: 120,    
+          radius: 11220,  
+          scale: 10000     
         }} 
       />
+    
        <group position={[0, 2.5, -4]} rotation={[0, 0, 0]}>
         <Root>
           <Container
@@ -58,14 +53,14 @@ export default function KclLevel1({ setNotification }: LevelProps) {
           </Container>
         </Root>
       </group>
-      <PositionalAudio
+      {/* <PositionalAudio
         ref={soundRef}
         url="/assets/kcl-level-1.mp3"
         distance={2}
         loop={false}
         autoplay={false}
         onEnded={() => soundRef.current?.stop()}
-      />
+      /> */}
       <group position={ [0, 0.6, -3]}>
         <Root>
           <Container>

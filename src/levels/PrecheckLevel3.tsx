@@ -80,7 +80,7 @@ export default function PrecheckLevel2({ setCurrentLevel, setNotification }: Lev
           </Container>
         </Root>
       </group>
-      <group position={[0, 0.09, -0.85]} rotation={[-Math.PI / 2, 0, 0]}>
+      {/* <group position={[0, 0.09, -0.85]} rotation={[-Math.PI / 2, 0, 0]}>
         <Root>
           <Container
             padding={10}
@@ -99,7 +99,7 @@ export default function PrecheckLevel2({ setCurrentLevel, setNotification }: Lev
             </Container>
           </Container>
         </Root>
-      </group>
+      </group> */}
         <group position={[0, 1.7, -3]}>
         <Root>
           <Container>

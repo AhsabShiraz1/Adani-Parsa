@@ -6,21 +6,16 @@ import { PositionalAudio } from "@react-three/drei";
 import { Button } from '../components/apfel/button';
 import { Volume2 } from "@react-three/uikit-lucide"
 import * as THREE from "three";
-
-
 export default function KclLevelPpe({ setNotification }: LevelProps) {
   const soundRef = useRef<THREE.PositionalAudio>(null);
-
   useEffect(() => {
     setNotification("Please wear the PPE Kit before the tour of the facility and read the instructions carefully")
   }, [])
-
   const handleAudio = () => {
     if (soundRef.current) {
       soundRef.current.play();
     }
   }
-
   return (
     <>   
       <Model scale={[0.23, 0.25, 0.25]} position={[0, 0, -5]} rotation={[0, 0, 0]} url="/assets/PPE-box.glb"></Model>
@@ -95,5 +90,4 @@ export default function KclLevelPpe({ setNotification }: LevelProps) {
       </group>
     </>
   )
-
 }
