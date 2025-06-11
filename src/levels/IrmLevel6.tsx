@@ -30,6 +30,7 @@ export default function IrmLevel6({ setNotification }: LevelProps) {
         {/* <Model url="/assets/irm-scene2-comp.glb" position={[190, -6.5, 150]} scale={5} rotation={[0, -Math.PI/2 , 0]} /> */}
         <Model url="/assets/crane-animated-v1.glb" position={[32, -6, -15]} scale={1} rotation={[0, 0, 0]} />
         <Model url="/assets/bulk-carrier-inside.glb" position={[0, 10, -12]} scale={0.2} rotation={[0, 0, 0]} />
+        <Model url="/assets/coalFall.glb" position={[28, 20, -11]} scale={0.8} rotation={[0, 0, 0]} />
         {/* <Model key="excavator" scale={1} position={[7, -6, -12]} rotation={[0, -Math.PI, 0]} url="/assets/Excavator.glb " /> */}
 
         {/* <Model url="/assets/excavator-1.glb" position={[0, -5, -3]} scale={10} rotation={[0, 0, 0]} /> */}
@@ -45,10 +46,10 @@ export default function IrmLevel6({ setNotification }: LevelProps) {
           scale: 650
         }}
       />
-      <CoalPile key="CoalPile1" scale={1.08} position={[-5, -9, -12]} rotation={[0, 0, 0]} />
-      <CoalPile key="CoalPile2" scale={1.08} position={[3.8, -9, -12]} rotation={[0, 0, 0]} />
-      <CoalPile key="CoalPile3" scale={1.08} position={[-5, -9, -4]} rotation={[0, 0, 0]} />
-      <CoalPile key="CoalPile4" scale={1.08} position={[3.8, -9, -4]} rotation={[0, 0, 0]} />
+      <CoalPile key="CoalPile1" scale={1.1} position={[-5, -9.8, -10.5]} rotation={[0, 0, 0]} />
+      <CoalPile key="CoalPile2" scale={1.1} position={[3.8, -9.8, -10.5]} rotation={[0, 0, 0]} />
+      <CoalPile key="CoalPile3" scale={1.08} position={[-5, -9.8, -4]} rotation={[0, 0, 0]} />
+      <CoalPile key="CoalPile4" scale={1.08} position={[3.8, -10.5, -4]} rotation={[0, 0, 0]} />
 
       {/* <VideoPlayer scale={[0.6, 0.6, 0.6]} src="/assets/crane-unloading-final.mp4" position={[-8, 2.5, -6]} rotation={[0, Math.PI / 4, 0]}></VideoPlayer> */}
 
@@ -83,7 +84,7 @@ export default function IrmLevel6({ setNotification }: LevelProps) {
         autoplay={false}
         onEnded={() => soundRef.current?.stop()}
       />
-      <group position={[0, 0.6, -3]}>
+      <group position={[0, 0.8, -3]}>
         <Root>
           <Container>
             <Button variant="icon" padding={4} onClick={handleAudio}>

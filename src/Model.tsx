@@ -30,6 +30,7 @@ function Model({ url, position, scale, rotation }: ModelProps) {
     if (actions) {
       Object.keys(actions).forEach(actionName => {
         const action = actions[actionName];
+        console.log(actionName)
         if (action) {
           if (actionName === "ArmatureAction") {
             action.reset();
@@ -58,6 +59,14 @@ function Model({ url, position, scale, rotation }: ModelProps) {
             // action.setLoop(LoopOnce, Infinity);
             action.setEffectiveTimeScale(1 / 8);
             action?.play();
+          }
+          else if (actionName === "Break") {
+            action.reset();
+            setTimeout(() => {
+              action.setLoop(LoopOnce, 1);
+              action.setEffectiveTimeScale(1 / 5);
+              action?.play();
+            }, 40000); // 5 seconds delay
           }
           else {
             action.reset();
