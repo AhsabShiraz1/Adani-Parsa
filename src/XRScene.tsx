@@ -70,8 +70,8 @@ import AchLevel4 from './levels/AchLevel4'
 import AchLevel5 from './levels/AchLevel5'
 import AchLevel6 from './levels/AchLevel6'
 import AchLevel7 from './levels/AchLevel7'
-import AchConclusion from './levels/AchConclusion'
-import PasswordUpdate from './levels/PasswordUpdate'
+// import AchConclusion from './levels/AchConclusion'
+// import PasswordUpdate from './levels/PasswordUpdate'
 
 
 
@@ -257,10 +257,10 @@ function XRScene() {
                 return <AchLevel6 setCurrentLevel={setCurrentLevel} setNotification={setNotification} />
             case 59:
                 return <AchLevel7 setCurrentLevel={setCurrentLevel} setNotification={setNotification} />  
-            case 60:
-                return <AchConclusion setCurrentLevel={setCurrentLevel} setNotification={setNotification} />     
-            case 61:
-                return <PasswordUpdate setCurrentLevel={setCurrentLevel} setNotification={setNotification} />                                
+            // case 60:
+            //     return <AchConclusion setCurrentLevel={setCurrentLevel} setNotification={setNotification} />     
+            // case 61:
+            //     return <PasswordUpdate setCurrentLevel={setCurrentLevel} setNotification={setNotification} />                                
             default:
                 return <HomeLevel setCurrentLevel={setCurrentLevel} setNotification={setNotification} />;
         }

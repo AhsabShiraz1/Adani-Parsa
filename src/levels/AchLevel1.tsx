@@ -27,9 +27,9 @@ export default function AchLevel1({ setNotification }: LevelProps) {
 
         background 
         ground={{
-          height: 12,     
-          radius: 60,    
-          scale: 10      
+          height: 5,     
+          radius: 100,    
+          scale: 23      
         }} 
       />
       <group position={[0, 2.8, -5]} rotation={[0, 0 , 0]}>

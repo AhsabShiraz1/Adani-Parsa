@@ -26,9 +26,9 @@ export default function AchLevel3({ setNotification }: LevelProps) {
         files="/assets/ach-reception.hdr"
         background 
         ground={{
-          height: 2,     
-          radius: 8,    
-          scale: 100      
+          height: 5,     
+          radius: 100,    
+          scale: 23       
         }} 
       />
       <group position={[0, 2.8, -5]} rotation={[0, 0 , 0]}>
