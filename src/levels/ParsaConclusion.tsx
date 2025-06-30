@@ -91,7 +91,7 @@ export default function ParsaConclusion({ setNotification, setCurrentLevel }: Le
           >
             <Container flexDirection="column" alignItems="center" justifyContent="center">
               <Text fontSize={12} fontWeight="bold">
-                Enter your ID to proceed:
+                Enter your employee ID to proceed:
               </Text>
               <Text fontSize={12} fontWeight="bold">
                 Skipping this wont register your score
@@ -99,7 +99,7 @@ export default function ParsaConclusion({ setNotification, setCurrentLevel }: Le
               <Input
                 type="text"
                 value={inputValue}
-                placeholder="Enter ID"
+                placeholder="Enter employee ID"
                 onValueChange={(value) => setInputValue(value)}
                 marginY={10}
                 borderColor="white"
