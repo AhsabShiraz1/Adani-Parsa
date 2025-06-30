@@ -7,10 +7,10 @@ import { Button } from "../components/apfel/button"
 // import { CheckCircleIcon } from "@react-three/uikit-lucide"
 import Model from "../Model"
 import { DoubleSide } from "three"
-import { HomeIcon, Volume2 } from "@react-three/uikit-lucide"
+import { Volume2 } from "@react-three/uikit-lucide"
 import { PositionalAudio } from "@react-three/drei"
 
-export default function PrecheckLevel2({ setCurrentLevel, setNotification }: LevelProps) {
+export default function PrecheckLevel2({ setNotification }: LevelProps) {
   const soundRef = useRef<THREE.PositionalAudio>(null);
 
   useEffect(() => {
@@ -80,7 +80,7 @@ export default function PrecheckLevel2({ setCurrentLevel, setNotification }: Lev
           </Container>
         </Root>
       </group>
-      <group position={[0, 0.09, -0.85]} rotation={[-Math.PI / 2, 0, 0]}>
+      {/* <group position={[0, 0.09, -0.85]} rotation={[-Math.PI / 2, 0, 0]}>
         <Root>
           <Container
             padding={10}
@@ -99,8 +99,8 @@ export default function PrecheckLevel2({ setCurrentLevel, setNotification }: Lev
             </Container>
           </Container>
         </Root>
-      </group>
-        <group position={[0, 1.7, -3]}>
+      </group> */}
+        {/* <group position={[0, 1.7, -3]}>
         <Root>
           <Container>
             <Button variant="icon" padding={4} onClick={() => setCurrentLevel(0)}>
@@ -108,7 +108,7 @@ export default function PrecheckLevel2({ setCurrentLevel, setNotification }: Lev
             </Button>
           </Container>
         </Root>
-      </group>
+      </group> */}
     </>
   )
 
