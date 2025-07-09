@@ -41,13 +41,14 @@ export default function Silo({ setNotification }: LevelProps) {
     <>
       <Suspense fallback={null}>
         <Model key="parsa-ground-silo" scale={0.5} position={[4, -4.83, 85]} rotation={[0, -Math.PI / 2, 0]} url="/assets/exploration-ground-v1.glb" />
-        <Model scale={1} position={[5, 0, -18]} rotation={[0, 0, 0]} url="/assets/Silo-tracks.glb" />
+        <Model scale={1.25} position={[5, 0.35, -17.7]} rotation={[0, 0, 0]} url="/assets/parsa-updated-train-model.glb" />
         <Model scale={0.5} position={[78, 0, -11.7]} rotation={[0, 4.7, 0]} url="/assets/long_rail_road.glb" />
         <Model scale={0.5} position={[-70, 0, -13]} rotation={[0, 4.7, 0]} url="/assets/long_rail_road_2.glb" />
-        <Model scale={1} position={[-16, -1.5, -17.3]} rotation={[0, Math.PI / 2, 0]} url="/assets/Train_engine.glb" />
+        <Model scale={0.5} position={[-10, 0, -13]} rotation={[0, 4.7, 0]} url="/assets/tracks-silo-updated.glb" />
+
+
         <Model scale={1.2} position={[44, 0.6, 1.2]} rotation={[0, -Math.PI, 0]} url="/assets/parsa-railway-props.glb" />
-        <Model scale={0.8} position={[-40, 0, 1.2]} rotation={[0, -Math.PI, 0]} url="/assets/locomotive-train-storage.glb" />
-        <Model scale={1} position={[25, 0.6, -12.5]} rotation={[0, 0, 0]} url="/assets/Train_boogies.glb" />
+
         <Model scale={1.2} position={[44, 0.6, 1.2]} rotation={[0, -Math.PI, 0]} url="/assets/parsa-railway-props.glb" />
         <Model scale={0.8} position={[-40, 0, 1.2]} rotation={[0, -Math.PI, 0]} url="/assets/locomotive-train-storage.glb" />
         <Model scale={1.2} position={[-35, 0, -32]} rotation={[0, -Math.PI, 0]} url="/assets/railway-poles.glb" />

@@ -3,7 +3,6 @@ import { useEffect, useRef } from "react";
 import Model from "../Model";
 import { Environment } from "@react-three/drei"
 // import VideoPlayer from '../VideoPlayer';
-import { PositionalAudio } from "@react-three/drei";
 import * as THREE from "three";
 import { Button } from '../components/apfel/button';
 import { Volume2 } from "@react-three/uikit-lucide"
@@ -13,22 +12,16 @@ import { Root, Text, Container } from "@react-three/uikit";
 
 export default function ParsaLevel12({ setNotification }: LevelProps) {
   const soundRef = useRef<THREE.PositionalAudio>(null);
-  const autoPlaySoundRef = useRef<THREE.PositionalAudio>(null);
 
   useEffect(() => {
     // Set notification
     setNotification("Washed Coal is sent to silo via conveyor belt \n Coal received either directly from the washery or from stacking yard \n Please read the card carefully");
 
-    // Autoplay the new positional audio when component mounts
-    if (autoPlaySoundRef.current) {
-      autoPlaySoundRef.current.play();
-    }
+  
 
     // Cleanup on unmount
     return () => {
-      if (autoPlaySoundRef.current) {
-        autoPlaySoundRef.current.stop();
-      }
+    console.log("parsa-level-after-silo")
     };
   }, [setNotification]);
 
@@ -82,22 +75,8 @@ export default function ParsaLevel12({ setNotification }: LevelProps) {
           </Container>
         </Root>
       </group>
-      <PositionalAudio
-        ref={soundRef}
-        url="/assets/parsa-level-12-updated.mp3"
-        distance={2}
-        loop={false}
-        autoplay={false}
-        onEnded={() => soundRef.current?.stop()}
-      />
-      <PositionalAudio
-        ref={autoPlaySoundRef}
-        url="/assets/water-sound.mp3"
-        distance={1}
-        loop={false}
-        autoplay={false}
-        onEnded={() => autoPlaySoundRef.current?.stop()}
-      />
+  
+    
       <group position={[0, 0.4, -3]}>
         <Root>
           <Container>

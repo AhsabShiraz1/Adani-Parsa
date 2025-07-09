@@ -49,6 +49,7 @@ import ParsaConclusion from './levels/ParsaConclusion'
 // import IrmLevel6 from './levels/IrmLevel6'
 import { Button } from './components/apfel/button';
 import { Card } from './components/apfel/card'
+// import { useThree } from '@react-three/fiber'
 // import KclLevelPpe from './levels/KclLevelPpe'
 // import IrmLevel from './levels/IrmLevel'
 // import IrmLevel7 from './levels/IrmLevel7'
@@ -79,14 +80,21 @@ import { Card } from './components/apfel/card'
 function XRScene() {
 
     const store = createXRStore()
-    // const uiRef = useRef(null);
     const menuRef = useRef(null);
-
-    // const { player } = useXR()
-    // const { session, isPresenting } = useXR();
-
     const [currentLevel, setCurrentLevel] = useState(0)
     const [ , setNotification] = useState("Welcome to Adani training Center")
+    const prevLevel = useRef(currentLevel)
+
+    useEffect(() => {
+        // Only run cleanup if moving from a heavy level to another
+        if (prevLevel.current >= 12 && currentLevel !== prevLevel.current) {
+            // Place your cleanup logic here
+            console.log("Cleaning up resources for levels 12 and above");
+            // You should NOT call gl.dispose() unless you want to destroy the renderer
+            // Instead, dispose models/textures in each level's cleanup
+        }
+        prevLevel.current = currentLevel
+    }, [currentLevel])
 
     useEffect(() => {
         const currentTimestamp = Date.now();
