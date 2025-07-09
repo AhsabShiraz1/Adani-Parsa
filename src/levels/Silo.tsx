@@ -51,7 +51,7 @@ export default function Silo({ setNotification }: LevelProps) {
 
         <Model scale={1.2} position={[44, 0.6, 1.2]} rotation={[0, -Math.PI, 0]} url="/assets/parsa-railway-props.glb" />
         <Model scale={0.8} position={[-40, 0, 1.2]} rotation={[0, -Math.PI, 0]} url="/assets/locomotive-train-storage.glb" />
-        <Model scale={1.2} position={[-35, 0, -32]} rotation={[0, -Math.PI, 0]} url="/assets/railway-poles.glb" />
+        {/* <Model scale={1.2} position={[-35, 0, -32]} rotation={[0, -Math.PI, 0]} url="/assets/railway-poles.glb" /> */}
 
 
 
