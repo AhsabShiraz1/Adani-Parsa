@@ -29,10 +29,9 @@ export default function ParsaLevel8({ setNotification }: LevelProps) {
       <Model scale={0.6} position={[8, -0.1, -16]} rotation={[0, -Math.PI /2 , 0]} url="/assets/surface-miner.glb"></Model>
       <Model key="parsa-ground" scale={0.5} position={[4, -4.83, 85]} rotation={[0, -Math.PI /2 , 0]} url="/assets/exploration-ground-v1.glb"></Model>
       <CoalPile key="CoalPile1" scale={1} position={[1.8, -8.5, -28]} rotation={[0, 0, 0]} />
-      <CoalPile key="CoalPile2" scale={1} position={[-12, -8.5, -58]} rotation={[0, 0, 0]} />
-      <CoalPile key="CoalPile3" scale={1} position={[15, -8.5, -35]} rotation={[0, 0, 0]} />
-      <Model key="excavator" scale={2} position={[28, 0, -32]} rotation={[0, -Math.PI / 3, 0]} url="/assets/Excavator.glb " />
-      <Model key="dump-truck" scale={0.8} position={[-25, 0, -45]} rotation={[0, -Math.PI / 3, 0]} url="/assets/Dump-truck.glb " />
+      <CoalPile key="CoalPile2" scale={1} position={[-6, -8.5, -38]} rotation={[0, 0, 0]} />
+      {/* <CoalPile key="CoalPile3" scale={1} position={[15, -8.5, -35]} rotation={[0, 0, 0]} /> */}
+      <Model key="excavator" scale={2} position={[-18, 0, -35]} rotation={[0, -Math.PI / 3, 0]} url="/assets/Excavator.glb " />
       <Environment
         files="/assets/parsa-env-compressed.hdr"
         background

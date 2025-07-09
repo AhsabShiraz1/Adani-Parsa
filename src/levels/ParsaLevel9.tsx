@@ -27,7 +27,7 @@ export default function ParsaLevel9({ setNotification }: LevelProps) {
 
   return (
     <>      
-      <Model key="washery" scale={1} position={[0, -0.5, -50]} rotation={[0,  -Math.PI/2 , 0]} url="/assets/parsaWashery.glb" />
+      <Model key="washery" scale={0.15} position={[0, -0.5, -50]} rotation={[0,  -Math.PI/2 , 0]} url="/assets/parsaWashery-updated.glb" />
       <Model key="washery-ground" scale={2.5} position={[0, -0.8, -15]} rotation={[0,  -Math.PI/2 , 0]} url="/assets/washery-ground-final.glb" />
 
       <Environment 
