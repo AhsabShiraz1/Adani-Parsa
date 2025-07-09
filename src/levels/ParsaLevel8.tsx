@@ -31,7 +31,7 @@ export default function ParsaLevel8({ setNotification }: LevelProps) {
       <CoalPile key="CoalPile1" scale={1} position={[1.8, -8.5, -28]} rotation={[0, 0, 0]} />
       <CoalPile key="CoalPile2" scale={1} position={[-6, -8.5, -38]} rotation={[0, 0, 0]} />
       {/* <CoalPile key="CoalPile3" scale={1} position={[15, -8.5, -35]} rotation={[0, 0, 0]} /> */}
-      <Model key="excavator" scale={2} position={[-18, 0, -35]} rotation={[0, -Math.PI / 3, 0]} url="/assets/Excavator.glb " />
+      {/* <Model key="excavator" scale={2} position={[-18, 0, -35]} rotation={[0, -Math.PI / 3, 0]} url="/assets/Excavator.glb " /> */}
       <Environment
         files="/assets/parsa-env-compressed.hdr"
         background
