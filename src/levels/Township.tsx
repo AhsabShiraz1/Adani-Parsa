@@ -78,7 +78,7 @@ export default function Township({ setNotification }: LevelProps) {
         scale={1.1}
         position={[0, 5, 0]}
         rotation={[0, -Math.PI / 4, 0]}
-        url="/assets/intro-gallery.glb"
+        url="/assets/intro-gallery-csr.glb"
       />
       <PositionalAudio
         ref={soundRef}
